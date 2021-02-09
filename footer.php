@@ -11,12 +11,12 @@
 
 ?>
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'wpboxy' ) ); ?>">
+	<footer id="colophon" class="main__footer">
+		<div class="container">
+			<a href="<?php echo esc_url( __( 'https://sajjadcodes.com/', 'wpboxy' ) ); ?>" class="main__footer--copyright">
 				<?php
 				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'wpboxy' ), 'WordPress' );
+				printf( esc_html__( 'Developed By %s', 'wpboxy' ), 'SajjadHussain' );
 				?>
 			</a>
 			<span class="sep"> | </span>
@@ -30,5 +30,14 @@
 
 <?php wp_footer(); ?>
 
+</body>
+</html>
+
+
+<footer class="main__footer">
+            <div class="container">
+                <p class="main__footer--copyright">©2020, Theme. All Rights Reserved.</p>
+            </div>
+        </footer>
 </body>
 </html>
