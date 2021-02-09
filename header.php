@@ -44,20 +44,27 @@
 							<p class="site-description"><?php echo $wpboxy_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
 					<?php endif; ?>
 				</div>
-			</div>
-
-		</div>
-
-		<nav id="site-navigation" class="header__primary--nav">
+			<nav id="site-navigation" class="header__primary--nav">
 			<?php
 			wp_nav_menu(
 				array(
 					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
+					'container'		 =>'ul',
+					'menu_class'	 =>'nav__list',
+					'fallback_cb'	 =>false,
+					'depth'			=> 4
+					
+					
 				)
 			);
 			?>
-		</nav><!-- #site-navigation -->
+		</nav>			
+			</div>
+			
+	
+		</div>
+
+	<!-- #site-navigation -->
 	</header><!-- #masthead -->
 
 	<header class="header">
