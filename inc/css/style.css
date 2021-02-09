@@ -153,7 +153,10 @@ body {
   display: flex;
   align-items: center; }
   .main__footer--copyright {
-    color: white; }
+    color: white;
+    text-decoration: none; }
+    .main__footer--copyright:hover {
+      color: #EBEBEB; }
 
 .btn {
   border: none;

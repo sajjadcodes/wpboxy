@@ -11,5 +11,9 @@
     align-items: center;
         &--copyright{
         color:white;
+        text-decoration:none;
+        &:hover{
+            color:$secondary-color;
+        }
         }
 }
