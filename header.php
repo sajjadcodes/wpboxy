@@ -25,28 +25,30 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'wpboxy' ); ?></a>
 
-	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$wpboxy_description = get_bloginfo( 'description', 'display' );
-			if ( $wpboxy_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $wpboxy_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
+	<header id="masthead" class="header">
 
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'wpboxy' ); ?></button>
+		<div class="container">
+
+			<div class="header__primary">
+				<div class="header__primary--logo">
+					<?php
+						the_custom_logo();
+						if ( is_front_page() && is_home() ) :
+							?>
+							<h1 class="site-title secondary-heading"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+							<?php
+						endif;
+						$wpboxy_description = get_bloginfo( 'description', 'display' );
+						if ( $wpboxy_description || is_customize_preview() ) :
+							?>
+							<p class="site-description"><?php echo $wpboxy_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
+					<?php endif; ?>
+				</div>
+			</div>
+
+		</div>
+
+		<nav id="site-navigation" class="header__primary--nav">
 			<?php
 			wp_nav_menu(
 				array(
@@ -57,3 +59,24 @@
 			?>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
+
+	<header class="header">
+        <div class="container">
+            <div class="header__primary">
+                <div class="header__primary--logo">
+                    
+                    <h1 class="secondary-heading"><a href="#">Theme</a></h1>
+                     
+                </div>
+                <nav class="header__primary--nav">
+                    <ul class="nav__list">
+                        <li class="nav__list--item"><a href="#">Home</a></li> 
+                        <li class="nav__list--item"><a href="#">static Page</a></li> 
+                        <li class="nav__list--item"><a href="#">Blog</a></li> 
+                        <li class="nav__list--item"><a href="#">Contact Us</a></li> 
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+    </header

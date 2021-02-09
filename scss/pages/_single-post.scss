@@ -1,0 +1,31 @@
+
+
+
+
+.post__single{
+
+    &--category{
+        text-align:center;
+        color:$white-color;
+        background:$primary-color;
+        width:20%;
+        display:inline-block;
+    }
+    &--meta{
+        text-align:center;
+        margin-bottom: 3rem;
+    }
+    & --title{
+        font-size:4.8rem;
+        line-height:5.6rem;
+        text-align:center;
+    }
+    &--featured ,
+    &--content
+    {
+        margin-bottom: 3rem;
+    }
+    
+    
+   
+}

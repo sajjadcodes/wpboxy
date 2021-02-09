@@ -1,0 +1,15 @@
+//============
+// Footer
+//============
+
+
+.main__footer{
+    background-color:$primary-color;
+    height: 70px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+        &--copyright{
+        color:white;
+        }
+}
