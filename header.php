@@ -67,23 +67,4 @@
 	<!-- #site-navigation -->
 	</header><!-- #masthead -->
 
-	<header class="header">
-        <div class="container">
-            <div class="header__primary">
-                <div class="header__primary--logo">
-                    
-                    <h1 class="secondary-heading"><a href="#">Theme</a></h1>
-                     
-                </div>
-                <nav class="header__primary--nav">
-                    <ul class="nav__list">
-                        <li class="nav__list--item"><a href="#">Home</a></li> 
-                        <li class="nav__list--item"><a href="#">static Page</a></li> 
-                        <li class="nav__list--item"><a href="#">Blog</a></li> 
-                        <li class="nav__list--item"><a href="#">Contact Us</a></li> 
-                    </ul>
-                </nav>
-            </div>
-        </div>
-
-    </header
+	
