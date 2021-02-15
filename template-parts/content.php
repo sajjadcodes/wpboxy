@@ -10,11 +10,11 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class("post__area--single"); ?>>
-		<header class="entry-header">
-		<!-- post thumbnail  -->
+			<header class="entry-header">
+	
 						<div class="post__area--featured">
-                           	 <img src="https://cdn.pixabay.com/photo/2021/01/13/16/46/workout-5914643_960_720.jpg" alt="post url" class="post__area--img">
-								<?php wpboxy_post_thumbnail(); ?>
+                           	 <!-- <img src="https://cdn.pixabay.com/photo/2021/01/13/16/46/workout-5914643_960_720.jpg" alt="post url" class="post__area--img"> -->
+							<?php wpboxy_post_thumbnail(); ?>
                         </div>
 						<div class="post__area--excerpt">
 							<?php
@@ -33,11 +33,9 @@
 										?>
 									</div><!-- .entry-meta -->
 								<?php endif; ?>
-		</header><!-- .entry-header -->
+			</header><!-- .entry-header -->
 
-							
-
-							<div class="entry-content">
+			<div class="entry-content">
 								<?php
 								the_content(
 									sprintf(
@@ -65,6 +63,6 @@
 						</div>
 		<!-- post thumbnail end here -->
 			<footer class="entry-footer">
-			<?php wpboxy_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+					<?php wpboxy_entry_footer(); ?>
+			</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->
