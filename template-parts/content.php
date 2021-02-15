@@ -9,8 +9,14 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class("post__area--single"); ?>>
 	<header class="entry-header">
+		<!-- post thumbnail  -->
+						<div class="post__area--featured">
+                           	 <img src="https://cdn.pixabay.com/photo/2021/01/13/16/46/workout-5914643_960_720.jpg" alt="post url" class="post__area--img">
+                        </div>
+
+		<!-- post thumbnail end here -->
 		<?php
 		if ( is_singular() ) :
 			the_title( '<h1 class="entry-title">', '</h1>' );
