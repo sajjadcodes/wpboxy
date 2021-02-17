@@ -13,6 +13,10 @@
     flex-basis: 64%;
     overflow: hidden;
     margin-bottom: 6rem;
+    a{
+        text-decoration: none;
+        color:inherit;
+    }
 
     &--single{
         border: 1px solid $secondary-color;
@@ -35,6 +39,11 @@
 }
 .post__meta{
     margin: 15px 0;
+    color:#747474;
+    a{
+        text-decoration: none;
+        color:#747474;
+    }
 }
 
 // .post__area{

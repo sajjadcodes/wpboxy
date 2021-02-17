@@ -188,6 +188,9 @@ body {
   flex-basis: 64%;
   overflow: hidden;
   margin-bottom: 6rem; }
+  .post__area a {
+    text-decoration: none;
+    color: inherit; }
   .post__area--single {
     border: 1px solid #EBEBEB;
     border-radius: 4px;
@@ -202,7 +205,11 @@ body {
       margin-top: 3rem; }
 
 .post__meta {
-  margin: 15px 0; }
+  margin: 15px 0;
+  color: #747474; }
+  .post__meta a {
+    text-decoration: none;
+    color: #747474; }
 
 .post__single--category {
   text-align: center;

@@ -14,7 +14,7 @@ if ( ! function_exists( 'wpboxy_posted_on' ) ) :
 	function wpboxy_posted_on() {
 		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
-			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
+			$time_string = '<time class="entry-date published post__meta" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
 		}
 
 		$time_string = sprintf(
@@ -122,10 +122,11 @@ if ( ! function_exists( 'wpboxy_post_thumbnail' ) ) :
 	function wpboxy_post_thumbnail() {
 		if ( post_password_required() || is_attachment() || ! has_post_thumbnail() ) {
 			return;
-		}
+		} ?>
 
-		if ( is_singular() ) :
-			?>
+		<div class="post__area--featured">
+	
+		<?php if ( is_singular() ) : ?>
 			
 			<?php the_post_thumbnail(); ?>
 
@@ -146,9 +147,10 @@ if ( ! function_exists( 'wpboxy_post_thumbnail' ) ) :
 				?>
 			</a>
 
-			<?php
-		endif; // End is_singular().
-	}
+		<?php endif; // End is_singular(). ?>
+		</div>
+
+	<?php }
 endif;
 
 if ( ! function_exists( 'wp_body_open' ) ) :

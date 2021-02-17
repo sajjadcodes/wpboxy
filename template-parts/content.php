@@ -11,11 +11,9 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class("post__area--single"); ?>>
 			<header class="entry-header">
-	
-						<div class="post__area--featured">
-                           	 <!-- <img src="https://cdn.pixabay.com/photo/2021/01/13/16/46/workout-5914643_960_720.jpg" alt="post url" class="post__area--img"> -->
-							<?php wpboxy_post_thumbnail(); ?>
-                        </div>
+
+						<?php wpboxy_post_thumbnail(); ?>
+                    
 						<div class="post__area--excerpt">
 							<?php
 								if ( is_singular() ) :
@@ -26,7 +24,7 @@
 
 								if ( 'post' === get_post_type() ) :
 									?>
-									<div class="entry-meta">
+									<div class="entry-meta post__meta">
 										<?php
 										wpboxy_posted_on();
 										wpboxy_posted_by();
@@ -60,7 +58,7 @@
 								);
 								?>
 						</div><!-- .entry-content -->
-						</div>
+					
 		<!-- post thumbnail end here -->
 			<footer class="entry-footer">
 					<?php wpboxy_entry_footer(); ?>
